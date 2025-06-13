@@ -1,0 +1,50 @@
+{
+  "status": true,
+  "cantidad": "7",
+  "cookie": [
+    {
+      "name": "c_user",
+      "value": "100089816092503",
+      "expires": "Thu, 11 Jun 2026 16:39:40 GMT",
+      "expires_timestamp": 1781195980,
+      "domain": ".facebook.com",
+      "path": "/",
+      "secure": true,
+      "httponly": null,
+      "samesite": "None"
+    },
+    {
+      "name": "xs",
+      "value": "50:Z-6mrmDnR3PIFw:2:1749659982:-1:-1",
+      "expires": "Thu, 11 Jun 2026 16:39:40 GMT",
+      "expires_timestamp": 1781195980,
+      "domain": ".facebook.com",
+      "path": "/",
+      "secure": true,
+      "httponly": true,
+      "samesite": "None"
+    },
+    {
+      "name": "fr",
+      "value": "0YxdwJ9TB7T5dCE20.AWfsnpkhPSduBi1VYM_hgd3NpvP6SwjEe02pRv7SHHb7kl9D9BI.BoSbFM..AAA.0.0.BoSbFM.AWdsIaWdhf-f_1GbHEsPMXLkBgA",
+      "expires": "Tue, 09 Sep 2025 16:39:40 GMT",
+      "expires_timestamp": 1757435980,
+      "domain": ".facebook.com",
+      "path": "/",
+      "secure": true,
+      "httponly": true,
+      "samesite": "None"
+    },
+    {
+      "name": "datr",
+      "value": "TLFJaH6Cq6NJ-5YIHlfQo5ZC",
+      "expires": "Thu, 16 Jul 2026 16:39:40 GMT",
+      "expires_timestamp": 1784219980,
+      "domain": ".facebook.com",
+      "path": "/",
+      "secure": true,
+      "httponly": true,
+      "samesite": "None"
+    }
+  ]
+}

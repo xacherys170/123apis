@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Subir Cookie</title>
+  <style>
+    body { font-family: sans-serif; padding: 2em; background: #f9f9f9; }
+    form { background: white; padding: 2em; max-width: 500px; margin: auto; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    textarea, input { width: 100%; padding: 10px; margin: 10px 0; font-size: 1em; }
+    button { padding: 10px 15px; background: #0070f3; color: white; border: none; border-radius: 5px; cursor: pointer; }
+    .response { margin-top: 1em; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <form id="cookieForm">
+    <h2>Subir Cookie</h2>
+    <input type="text" id="lista" placeholder="Nombre de la lista (ej: Jeffrey)" required />
+    <input type="text" id="token" placeholder="API Token" required />
+    <textarea id="cookie" placeholder='Pega aquí tu cookie en formato JSON' rows="10" required></textarea>
+    <button type="submit">Subir</button>
+    <div class="response" id="response"></div>
+  </form>
+
+  <script>
+    document.getElementById("cookieForm").addEventListener("submit", async function (e) {
+      e.preventDefault();
+      const lista = document.getElementById("lista").value;
+      const token = document.getElementById("token").value;
+      const cookie = document.getElementById("cookie").value;
+
+      const res = await fetch("/.netlify/functions/upload-cookie", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ lista, token, cookie })
+      });
+
+      const result = await res.json();
+      document.getElementById("response").textContent = result.message || result.error || "Error desconocido";
+    });
+  </script>
+</body>
+</html>
